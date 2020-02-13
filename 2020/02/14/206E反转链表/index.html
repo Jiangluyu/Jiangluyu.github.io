@@ -14,17 +14,22 @@
 <meta name="author" content="蒋璐煜">
 
 
-    
-    
 
-
-<meta property="og:type" content="website">
-<meta property="og:title" content="Louis睡醒了">
-<meta property="og:url" content="http://jiangluyu.com/index.html">
+<meta name="description" content="反转一个单链表。示例:输入: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL输出: 5-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;1-&amp;gt;NULL 方法一：外部容器将链表转存至新的容器vector内，再利用vector本身的reverse_iterator进行反向遍历，将内容一一对应存入链表节点内。 12345678910111213141516171819202122">
+<meta name="keywords" content="LeetCode">
+<meta property="og:type" content="article">
+<meta property="og:title" content="206E反转链表">
+<meta property="og:url" content="http://jiangluyu.com/2020/02/14/206E反转链表/index.html">
 <meta property="og:site_name" content="Louis睡醒了">
+<meta property="og:description" content="反转一个单链表。示例:输入: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL输出: 5-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;1-&amp;gt;NULL 方法一：外部容器将链表转存至新的容器vector内，再利用vector本身的reverse_iterator进行反向遍历，将内容一一对应存入链表节点内。 12345678910111213141516171819202122">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://jiangluyu.com/2020/02/14/206E反转链表/Users/Teamo/Desktop/Leetcode/image-20200212170704129.png">
+<meta property="og:image" content="http://jiangluyu.com/2020/02/14/206E反转链表/Users/Teamo/Desktop/Leetcode/image-20200212170719065.png">
+<meta property="og:updated_time" content="2020-02-13T16:36:51.762Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Louis睡醒了">
+<meta name="twitter:title" content="206E反转链表">
+<meta name="twitter:description" content="反转一个单链表。示例:输入: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL输出: 5-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;1-&amp;gt;NULL 方法一：外部容器将链表转存至新的容器vector内，再利用vector本身的reverse_iterator进行反向遍历，将内容一一对应存入链表节点内。 12345678910111213141516171819202122">
+<meta name="twitter:image" content="http://jiangluyu.com/2020/02/14/206E反转链表/Users/Teamo/Desktop/Leetcode/image-20200212170704129.png">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -52,13 +57,11 @@
 <link rel="stylesheet" href="/css/style.css">
 
 
-    <style> .article { opacity: 0;} </style>
-
 
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Louis睡醒了</title>
+<title>206E反转链表 | Louis睡醒了</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -67,8 +70,8 @@
     var yiliaConfig = {
         fancybox: true,
         animate: true,
-        isHome: true,
-        isPost: false,
+        isHome: false,
+        isPost: true,
         isArchive: false,
         isTag: false,
         isCategory: false,
@@ -203,9 +206,7 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
 </nav>
-      <div class="body-wrap">
-  
-    <article id="post-206E反转链表" class="article article-type-post" itemscope="" itemprop="blogPost">
+      <div class="body-wrap"><article id="post-206E反转链表" class="article article-type-post" itemscope="" itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2020/02/14/206E反转链表/" class="article-date">
@@ -223,8 +224,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/02/14/206E反转链表/">206E反转链表</a>
+    <h1 class="article-title" itemprop="name">
+      206E反转链表
     </h1>
   
 
@@ -250,6 +251,17 @@
 
 		
       </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
       
     
     <div class="article-entry" itemprop="articleBody">
@@ -282,206 +294,135 @@
       
     </div>
     
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
   </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2020/02/14/206E反转链表/">206E反转链表</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">蒋璐煜</a></p>
+        <p><span>发布时间:</span>2020-02-14, 00:35:27</p>
+        <p><span>最后更新:</span>2020-02-14, 00:36:51</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2020/02/14/206E反转链表/" title="206E反转链表">http://jiangluyu.com/2020/02/14/206E反转链表/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://jiangluyu.com/2020/02/14/206E反转链表/　　作者: 蒋璐煜" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target="_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2019/01/04/少少/">
+                    少少
+                </a>
+            </div>
+        
+    </nav>
+
   
 </article>
 
-
-
-
-
-
-
-
-
-  
-    <article id="post-少少" class="article article-type-post" itemscope="" itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2019/01/04/少少/" class="article-date">
-      <time datetime="2019-01-03T16:05:16.000Z" itemprop="datePublished">2019-01-04</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy">
-    
-    
-      <header class="article-header">
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/01/04/少少/">少少</a>
-    </h1>
-  
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#方法一：外部容器"><span class="toc-number">1.</span> <span class="toc-text">方法一：外部容器</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#复杂度分析"><span class="toc-number">1.0.1.</span> <span class="toc-text">复杂度分析</span></a></li></ol></li></ol><li class="toc-item toc-level-3"><a class="toc-link" href="#方法二：迭代"><span class="toc-number">2.</span> <span class="toc-text">方法二：迭代</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#复杂度分析-1"><span class="toc-number">2.0.1.</span> <span class="toc-text">复杂度分析</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方法三：递归"><span class="toc-number">3.</span> <span class="toc-text">方法三：递归</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#复杂度分析-2"><span class="toc-number">3.0.1.</span> <span class="toc-text">复杂度分析</span></a></li></ol></li>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-6 i,
+        .toc-level-6 ol {
+            display: none !important;
+        }
+    </style>
 
-		
-		   <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">418字</span>
-      </span>
-    </span>
+    <input type="button" id="tocButton" value="隐藏目录" title="点击按钮隐藏或者显示文章目录">
 
-    <span class="post-time">
-      &nbsp; | &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">1分</span>
-      </span>
-    </span>
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"206E反转链表　| Louis睡醒了　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
 </div>
 
-		
-      </header>
-      
+
+
+
+
+
+
     
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <p>“如果提前了解了你们的人生，不知你们是否还会有勇气前来？”</p>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
+		<!-- 来必力City版安装代码 -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC80MTk2OC8xODUxNA==">
+	<script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
 
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/生活/">生活</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随想/">随想</a></li></ul>
-    </div>
+       if (typeof LivereTower === 'function') { return; }
 
-      
-        <p class="article-more-link">
-          <a href="/2019/01/04/少少/#more">阅读全文 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
 
-
-
-
-
-
-
-
-
-  
-    <article id="post-不问归期来路" class="article article-type-post" itemscope="" itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2019/01/01/不问归期来路/" class="article-date">
-      <time datetime="2018-12-31T23:12:27.000Z" itemprop="datePublished">2019-01-01</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/01/01/不问归期来路/">不问归期来路</a>
-    </h1>
-  
-
-		
-		   <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">2k字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp; | &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">7分</span>
-      </span>
-    </span>
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+	</script>
+<noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
 </div>
-
-		
-      </header>
-      
+<!-- City版安装代码已完成 -->
     
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <hr>
-<p>这条路上的人有很多，在2018这段收费公路上，说真的，还挺挤的（笑）。</p>
-<p>我想了好久，这一路我怎么过来的，遇到了哪些人，经历了哪些事。</p>
-<p>全部写下来吧。</p>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
 
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/总结/">总结</a></li></ul>
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2019/01/04/少少/" title="下一篇: 少少">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
     </div>
 
-      
-        <p class="article-more-link">
-          <a href="/2019/01/01/不问归期来路/#more">阅读全文 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2020/02/14/206E反转链表/">206E反转链表</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/04/少少/">少少</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/01/不问归期来路/">不问归期来路</a></li></ul>
 
 
 
 
-
-
-
-
-
-  
-  
+    <script>
+        
+    </script>
 </div>
       <footer id="footer">
     <div class="outer">
