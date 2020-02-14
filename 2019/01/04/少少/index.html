@@ -24,7 +24,7 @@
 <meta property="og:description" content="“如果提前了解了你们的人生，不知你们是否还会有勇气前来？”">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://jiangluyu.com/2019/01/04/少少/01.jpg">
-<meta property="og:updated_time" content="2019-01-03T19:33:41.166Z">
+<meta property="og:updated_time" content="2020-02-14T09:10:16.141Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="少少">
 <meta name="twitter:description" content="“如果提前了解了你们的人生，不知你们是否还会有勇气前来？”">
@@ -132,6 +132,8 @@
                         
                             <li><a href="/archives/">所有文章</a></li>
                         
+                            <li><a href="/tags/LeetCode">LeetCode</a></li>
+                        
                             <li><a href="/tags/">标签云</a></li>
                         
                             <li><a href="/about/">关于我</a></li>
@@ -182,6 +184,8 @@
                     <li><a href="/">主页</a></li>
                 
                     <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/LeetCode">LeetCode</a></li>
                 
                     <li><a href="/tags/">标签云</a></li>
                 
@@ -246,7 +250,6 @@
         <span class="post-count">1分</span>
       </span>
     </span>
-	
 </div>
 
 		
@@ -254,14 +257,16 @@
       
       <div class="article-info article-info-post">
         
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/随便写写/">随便写写</a>
+    </div>
 
-        <div style="margin-top:20px; margin-left:-15px">
-	
-		<div class="article-tag tagcloud">
-			<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/生活/">生活</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随想/">随想</a></li></ul>
-		</div>
-	
-</div>
+
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/生活/">生活</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随想/">随想</a></li></ul>
+	</div>
+
         <div class="clearfix"></div>
       </div>
       
@@ -292,7 +297,7 @@
         <p><span>本文标题:</span><a href="/2019/01/04/少少/">少少</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">蒋璐煜</a></p>
         <p><span>发布时间:</span>2019-01-04, 00:05:16</p>
-        <p><span>最后更新:</span>2019-01-04, 03:33:41</p>
+        <p><span>最后更新:</span>2020-02-14, 17:10:16</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2019/01/04/少少/" title="少少">http://jiangluyu.com/2019/01/04/少少/</a>
             <span class="copy-path" data-clipboard-text="原文: http://jiangluyu.com/2019/01/04/少少/　　作者: 蒋璐煜" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -308,8 +313,8 @@
     <nav id="article-nav">
         
             <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2020/02/14/206E反转链表/">
-                    206E反转链表
+                <a href="/2020/02/14/E206-反转链表/">
+                    E206-反转链表
                 </a>
             </div>
         
@@ -400,7 +405,7 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2020/02/14/206E反转链表/" title="上一篇: 206E反转链表">
+            <a href="/2020/02/14/E206-反转链表/" title="上一篇: E206-反转链表">
                 <i class="fa fa-angle-left"></i>
             </a>
         
@@ -414,7 +419,7 @@
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2020/02/14/206E反转链表/">206E反转链表</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/04/少少/">少少</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/01/不问归期来路/">不问归期来路</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2020/02/14/E867-转置矩阵/">E867-转置矩阵</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/14/E206-反转链表/">E206-反转链表</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/04/少少/">少少</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/01/不问归期来路/">不问归期来路</a></li></ul>
 
 
 
@@ -487,6 +492,27 @@
 
 
 
+    <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
 <div class="scroll" id="scroll">
     <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
     <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
@@ -506,7 +532,7 @@
              miniArchives: "a.post-list-link", 
             
              friends: "#js-friends a", 
-             socail: ".social a" 
+            
         }
         for (var x in oOpenInNew) {
             $(oOpenInNew[x]).attr("target", "_blank");
@@ -534,5 +560,5 @@
 <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>
   </div>
-<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":100,"height":200},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 </html>
