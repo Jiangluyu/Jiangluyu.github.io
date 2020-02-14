@@ -358,35 +358,23 @@
 
 
     
-	    <div id="gitment-ctn"></div> 
-<link rel="stylesheet" href="https://billts.site/extra_css/gitment.css">
-<script src="https://billts.site/js/gitment.js"></script>
+	    <div id="gittalk-ctn"></div> 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
 <script>
-// Auto Initialize Comments
 
-  let cmtBtns = document.getElementsByClassName('gitment-comments-init-btn');
-  let isClicked = false;
-
-  let timer = setInterval(() => {
-    Array.prototype.forEach.call(cmtBtns, item => {
-      item.click();
-      isClicked = true;
-      if(isClicked) {
-        clearInterval(timer);
-        console.log('Clear timer.')
-      }        
-    })
-  }, 1000)
-var gitment = new Gitment({
-  id: '少少',
+var gittalk = new gittalk({
   owner: 'Jiangluyu',
   repo: 'Comment-Repo',
   oauth: {
     client_id: '7b49f18bbd8123c6c1ac',
     client_secret: 'a3066cc6ee97023cc0a4074dbc44e8e3685fde55',
   },
+  admin: 'Jiangluyu,
+  id: 'location.pathname      // Ensure uniqueness and length less than 50,
+  distractionFreeMode: 'false  // Facebook-like distraction free mode,
 })
-gitment.render('gitment-ctn')
+gittalk.render('gittalk-ctn')
 </script>
     
 
