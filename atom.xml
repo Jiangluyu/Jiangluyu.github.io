@@ -46,20 +46,16 @@
     <link href="http://jiangluyu.com/2020/02/15/%E6%89%98%E7%A6%8F%E7%AD%94%E9%A2%98%E6%A8%A1%E6%9D%BF%EF%BC%88%E8%87%AA%E7%94%A8%EF%BC%89/"/>
     <id>http://jiangluyu.com/2020/02/15/托福答题模板（自用）/</id>
     <published>2020-02-15T14:32:57.000Z</published>
-    <updated>2020-02-15T15:43:06.775Z</updated>
+    <updated>2020-02-15T16:05:24.046Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="TASK-1"><a href="#TASK-1" class="headerlink" title="TASK 1"></a>TASK 1</h3><pre class="mermaid">graph TD;    A-->B;</pre><pre class="mermaid">graph TD;  A(Main idea)-->B(Reason 1)-->C(Reason 2)</pre><p>Template:</p><blockquote><p>When …, I’d …/Well honestly, I (dis)agree with the idea.</p><p>The most obvious reason is that + sub idea 1.</p><p>In my case/Take my own experience for example, …</p><p>Another reason is that + sub idea 2.</p><p>To be more specific/Specifically speaking,…</p><p>(Those are the reasons why I am for/against the idea.)</p></blockquote>]]></content>
+    <content type="html"><![CDATA[<h3 id="TASK-1"><a href="#TASK-1" class="headerlink" title="TASK 1"></a>TASK 1</h3><pre class="mermaid">graph TD;  A(Main idea)-->B(Reason 1)-->C(Reason 2)</pre><p>Template:</p><blockquote><p>When …, I’d …/Well honestly, I (dis)agree with the idea.</p><p>The most obvious reason is that + sub idea 1.</p><p>In my case/Take my own experience for example, …</p><p>Another reason is that + sub idea 2.</p><p>To be more specific/Specifically speaking,…</p><p>(Those are the reasons why I am for/against the idea.)</p></blockquote>]]></content>
     
     <summary type="html">
     
       
       
         &lt;h3 id=&quot;TASK-1&quot;&gt;&lt;a href=&quot;#TASK-1&quot; class=&quot;headerlink&quot; title=&quot;TASK 1&quot;&gt;&lt;/a&gt;TASK 1&lt;/h3&gt;&lt;pre class=&quot;mermaid&quot;&gt;graph TD;
-    A--&gt;B;&lt;/pre&gt;
-
-
-
-&lt;pre c
+  A(Main idea)--&gt;B(Reason 
       
     
     </summary>
