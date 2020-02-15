@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[独立口语思路练习]]></title>
+    <url>%2F2020%2F02%2F15%2F%E7%8B%AC%E7%AB%8B%E5%8F%A3%E8%AF%AD%E6%80%9D%E8%B7%AF%E7%BB%83%E4%B9%A0%2F</url>
+    <content type="text"><![CDATA[Q1: Smart phone &amp; navigational devices or ask the locals for direction?Main idea: the former Reason 1: professional –&gt; accurate, efficient Example 1: locals maybe do not know or give obsolete information –&gt; slower, while navigational devices are always up-to-date Reason 2: no need to care about language problem Example 2: cannot speak Japanese, Last year travel to Japan, Google Map –&gt; not miss any event planned]]></content>
+      <categories>
+        <category>TOEFL</category>
+      </categories>
+      <tags>
+        <tag>口语</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[托福答题模板（自用）]]></title>
     <url>%2F2020%2F02%2F15%2F%E6%89%98%E7%A6%8F%E7%AD%94%E9%A2%98%E6%A8%A1%E6%9D%BF%EF%BC%88%E8%87%AA%E7%94%A8%EF%BC%89%2F</url>
-    <content type="text"><![CDATA[TASK 112graph TD; A(Main idea)--&gt;B(Reason 1)--&gt;C(Reason 2) Template: When …, I’d …/Well honestly, I (dis)agree with the idea. The most obvious reason is that + sub idea 1. In my case/Take my own experience for example, … Another reason is that + sub idea 2. To be more specific/Specifically speaking,… (Those are the reasons why I am for/against the idea.)]]></content>
+    <content type="text"><![CDATA[TASK 1graph TD; A-->B; graph TD; A(Main idea)-->B(Reason 1)-->C(Reason 2) Template: When …, I’d …/Well honestly, I (dis)agree with the idea. The most obvious reason is that + sub idea 1. In my case/Take my own experience for example, … Another reason is that + sub idea 2. To be more specific/Specifically speaking,… (Those are the reasons why I am for/against the idea.)]]></content>
       <categories>
         <category>TOEFL</category>
       </categories>
