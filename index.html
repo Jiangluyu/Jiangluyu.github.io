@@ -594,6 +594,115 @@
 
 
   
+    <article id="post-关于hexo遇到的问题汇总" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2020/02/15/关于hexo遇到的问题汇总/" class="article-date">
+      <time datetime="2020-02-15T11:02:17.000Z" itemprop="datePublished">2020-02-15</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/02/15/关于hexo遇到的问题汇总/">关于hexo遇到的问题汇总</a>
+    </h1>
+  
+
+		
+		   <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text">  字数统计: </span>
+        <span class="post-count">981字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp; | &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">5分</span>
+      </span>
+    </span>
+</div>
+
+		
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h4 id="Q1-gyp-No-Xcode-or-CLT-version-detected"><a href="#Q1-gyp-No-Xcode-or-CLT-version-detected" class="headerlink" title="Q1: gyp: No Xcode or CLT version detected!"></a>Q1: gyp: No Xcode or CLT version detected!</h4><p>近日在将hexo从win迁移到mac时，卡在了npm安装上：</p>
+<p>运行如下命令时：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
+<p>出现如下错误：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">&gt; node install</span><br><span class="line"></span><br><span class="line">node-pre-gyp WARN Tried to download(404): https://fsevents-binaries.s3-us-west-2.amazonaws.com/v1.2.4/fse-v1.2.4-node-v67-darwin-x64.tar.gz</span><br><span class="line">node-pre-gyp WARN Pre-built binaries not found <span class="keyword">for</span> fsevents@1.2.4 and node@11.14.0 (node-v67 ABI, unknown) (falling back to <span class="built_in">source</span> compile with node-gyp)</span><br><span class="line">No receipt <span class="keyword">for</span> <span class="string">'com.apple.pkg.CLTools_Executables'</span> found at <span class="string">'/'</span>.</span><br><span class="line"></span><br><span class="line">No receipt <span class="keyword">for</span> <span class="string">'com.apple.pkg.DeveloperToolsCLILeo'</span> found at <span class="string">'/'</span>.</span><br><span class="line"></span><br><span class="line">No receipt <span class="keyword">for</span> <span class="string">'com.apple.pkg.DeveloperToolsCLI'</span> found at <span class="string">'/'</span>.</span><br><span class="line"></span><br><span class="line">gyp: No Xcode or CLT version detected!</span><br><span class="line">gyp ERR! configure error</span><br><span class="line">gyp ERR! stack Error: `gyp` failed with <span class="built_in">exit</span> code: 1</span><br><span class="line">gyp ERR! stack     at ChildProcess.onCpExit (/usr/<span class="built_in">local</span>/lib/node_modules/npm/node_modules/node-gyp/lib/configure.js:351:16)</span><br><span class="line">gyp ERR! stack     at ChildProcess.emit (events.js:193:13)</span><br><span class="line">gyp ERR! stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:255:12)</span><br><span class="line">gyp ERR! System Darwin 19.3.0</span><br><span class="line">gyp ERR! <span class="built_in">command</span> <span class="string">"/usr/local/Cellar/node/11.14.0/bin/node"</span> <span class="string">"/usr/local/lib/node_modules/npm/node_modules/node-gyp/bin/node-gyp.js"</span> <span class="string">"configure"</span> <span class="string">"--fallback-to-build"</span> <span class="string">"--module=/Users/louis/Documents/GitHub/jiangluyu.github.io/node_modules/fsevents/lib/binding/Release/node-v67-darwin-x64/fse.node"</span> <span class="string">"--module_name=fse"</span> <span class="string">"--module_path=/Users/louis/Documents/GitHub/jiangluyu.github.io/node_modules/fsevents/lib/binding/Release/node-v67-darwin-x64"</span> <span class="string">"--napi_version=4"</span> <span class="string">"--node_abi_napi=napi"</span></span><br><span class="line">gyp ERR! cwd /Users/louis/Documents/GitHub/jiangluyu.github.io/node_modules/fsevents</span><br><span class="line">gyp ERR! node -v v11.14.0</span><br><span class="line">gyp ERR! node-gyp -v v5.0.7</span><br><span class="line">gyp ERR! not ok</span><br><span class="line">node-pre-gyp ERR! build error</span><br><span class="line">node-pre-gyp ERR! stack Error: Failed to execute <span class="string">'/usr/local/Cellar/node/11.14.0/bin/node /usr/local/lib/node_modules/npm/node_modules/node-gyp/bin/node-gyp.js configure --fallback-to-build --module=/Users/louis/Documents/GitHub/jiangluyu.github.io/node_modules/fsevents/lib/binding/Release/node-v67-darwin-x64/fse.node --module_name=fse --module_path=/Users/louis/Documents/GitHub/jiangluyu.github.io/node_modules/fsevents/lib/binding/Release/node-v67-darwin-x64 --napi_version=4 --node_abi_napi=napi'</span> (1)</span><br><span class="line">node-pre-gyp ERR! stack     at ChildProcess.&lt;anonymous&gt; (/Users/louis/Documents/GitHub/jiangluyu.github.io/node_modules/fsevents/node_modules/node-pre-gyp/lib/util/compile.js:83:29)</span><br><span class="line">node-pre-gyp ERR! stack     at ChildProcess.emit (events.js:193:13)</span><br><span class="line">node-pre-gyp ERR! stack     at maybeClose (internal/child_process.js:999:16)</span><br><span class="line">node-pre-gyp ERR! stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:266:5)</span><br><span class="line">node-pre-gyp ERR! System Darwin 19.3.0</span><br><span class="line">node-pre-gyp ERR! <span class="built_in">command</span> <span class="string">"/usr/local/Cellar/node/11.14.0/bin/node"</span> <span class="string">"/Users/louis/Documents/GitHub/jiangluyu.github.io/node_modules/fsevents/node_modules/node-pre-gyp/bin/node-pre-gyp"</span> <span class="string">"install"</span> <span class="string">"--fallback-to-build"</span></span><br><span class="line">node-pre-gyp ERR! cwd /Users/louis/Documents/GitHub/jiangluyu.github.io/node_modules/fsevents</span><br><span class="line">node-pre-gyp ERR! node -v v11.14.0</span><br><span class="line">node-pre-gyp ERR! node-pre-gyp -v v0.10.0</span><br><span class="line">node-pre-gyp ERR! not ok</span><br><span class="line">Failed to execute <span class="string">'/usr/local/Cellar/node/11.14.0/bin/node /usr/local/lib/node_modules/npm/node_modules/node-gyp/bin/node-gyp.js configure --fallback-to-build --module=/Users/louis/Documents/GitHub/jiangluyu.github.io/node_modules/fsevents/lib/binding/Release/node-v67-darwin-x64/fse.node --module_name=fse --module_path=/Users/louis/Documents/GitHub/jiangluyu.github.io/node_modules/fsevents/lib/binding/Release/node-v67-darwin-x64 --napi_version=4 --node_abi_napi=napi'</span> (1)</span><br><span class="line">...以下省略</span><br></pre></td></tr></table></figure>
+<p>实际上，在尝试过使用如下命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xcode-select --install</span><br></pre></td></tr></table></figure>
+<p>进行修复时，并不成功。</p>
+<p><strong>解决方案如下：</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo rm -rf $(xcode-select -<span class="built_in">print</span>-path)</span><br><span class="line">xcode-select --install</span><br></pre></td></tr></table></figure>
+<h4 id="Q2-hexo迁移"><a href="#Q2-hexo迁移" class="headerlink" title="Q2: hexo迁移"></a>Q2: hexo迁移</h4><p>去年在原先的笔记本上建立的项目，彼时对github了解甚少，没想过在不同电脑上更新的需求，甚至还因此断更了一年（笑），迁移步骤如下：</p>
+<p>ssh配置好后，克隆github上yourname.github.io项目到本地：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/yourname/yourname.github.io.git</span><br></pre></td></tr></table></figure>
+<p>删除除了.git以外的所有文件；</p>
+<p>将blog源文件中的所有文件复制到xxx.github.io的文件夹中，并将theme文件夹中各个主题中的.git文件夹删除；</p>
+<p>创建hexo分支，并切换到hexo：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b hexo</span><br></pre></td></tr></table></figure>
+<p>将复制的文件提交到暂存区，并提交，推送至github：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">'new branch source files'</span></span><br><span class="line">git push --<span class="built_in">set</span>-upstream origin hexo</span><br></pre></td></tr></table></figure>
+<p>更新blog时，只需要照常即可：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo d -g</span><br></pre></td></tr></table></figure>
+<p>切换至新电脑时，只需要执行如下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> -b hexo https://github.com/yourname/yourname.github.io</span><br></pre></td></tr></table></figure>
+<p>在ssh配置正确，npm安装依赖后，即可更新。</p>
+<h4 id="Q3-无法备份-themes"><a href="#Q3-无法备份-themes" class="headerlink" title="Q3: 无法备份/themes"></a>Q3: 无法备份/themes</h4><p>在删掉themes中的所有主题的.git之后，发现使用如下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git comment -m <span class="string">'write your comment here'</span></span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
+<p>依然无法成功将自己修改过的主题提交到github上。</p>
+<h5 id="解决方案如下："><a href="#解决方案如下：" class="headerlink" title="解决方案如下："></a>解决方案如下：</h5><p>在确保删除了各个主题的.git文件后，执行如下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git rm --cached -r themes</span><br><span class="line">git add themes</span><br><span class="line">git commit -m <span class="string">'write your comment here'</span></span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index" style="margin-top:10px">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/bugfix/">bugfix</a>
+    </div>
+
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-E867-转置矩阵" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
