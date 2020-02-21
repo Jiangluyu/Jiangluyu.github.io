@@ -22,7 +22,7 @@
 <meta property="og:site_name" content="Louis睡醒了">
 <meta property="og:description" content="一些迁移、安装hexo时遇到的问题及解决方法。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-02-21T15:45:02.194Z">
+<meta property="og:updated_time" content="2020-02-21T15:52:33.443Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于hexo遇到的问题汇总">
 <meta name="twitter:description" content="一些迁移、安装hexo时遇到的问题及解决方法。">
@@ -269,7 +269,7 @@
           
         <p>一些迁移、安装hexo时遇到的问题及解决方法。</p>
 <a id="more"></a>
-<h4 id="Q1-gyp-No-Xcode-or-CLT-version-detected"><a href="#Q1-gyp-No-Xcode-or-CLT-version-detected" class="headerlink" title="Q1: gyp: No Xcode or CLT version detected!"></a>Q1: gyp: No Xcode or CLT version detected!</h4><p>近日在将hexo从win迁移到mac时，卡在了npm安装上：</p>
+<h3 id="Q1-gyp-No-Xcode-or-CLT-version-detected"><a href="#Q1-gyp-No-Xcode-or-CLT-version-detected" class="headerlink" title="Q1: gyp: No Xcode or CLT version detected!"></a>Q1: gyp: No Xcode or CLT version detected!</h3><p>近日在将hexo从win迁移到mac时，卡在了npm安装上：</p>
 <p>运行如下命令时：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
 <p>出现如下错误：</p>
@@ -279,7 +279,7 @@
 <p>进行修复时，并不成功。</p>
 <p><strong>解决方案如下：</strong></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo rm -rf $(xcode-select -<span class="built_in">print</span>-path)</span><br><span class="line">xcode-select --install</span><br></pre></td></tr></table></figure>
-<h4 id="Q2-hexo迁移"><a href="#Q2-hexo迁移" class="headerlink" title="Q2: hexo迁移"></a>Q2: hexo迁移</h4><p>去年在原先的笔记本上建立的项目，彼时对github了解甚少，没想过在不同电脑上更新的需求，甚至还因此断更了一年（笑），迁移步骤如下：</p>
+<h3 id="Q2-hexo迁移"><a href="#Q2-hexo迁移" class="headerlink" title="Q2: hexo迁移"></a>Q2: hexo迁移</h3><p>去年在原先的笔记本上建立的项目，彼时对github了解甚少，没想过在不同电脑上更新的需求，甚至还因此断更了一年（笑），迁移步骤如下：</p>
 <p>ssh配置好后，克隆github上yourname.github.io项目到本地：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/yourname/yourname.github.io.git</span><br></pre></td></tr></table></figure>
 <p>删除除了.git以外的所有文件；</p>
@@ -293,7 +293,7 @@
 <p>切换至新电脑时，只需要执行如下命令：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> -b hexo https://github.com/yourname/yourname.github.io</span><br></pre></td></tr></table></figure>
 <p>在ssh配置正确，npm安装依赖后，即可更新。</p>
-<h4 id="Q3-无法备份-themes"><a href="#Q3-无法备份-themes" class="headerlink" title="Q3: 无法备份/themes"></a>Q3: 无法备份/themes</h4><p>在删掉themes中的所有主题的.git之后，发现使用如下命令：</p>
+<h3 id="Q3-无法备份-themes"><a href="#Q3-无法备份-themes" class="headerlink" title="Q3: 无法备份/themes"></a>Q3: 无法备份/themes</h3><p>在删掉themes中的所有主题的.git之后，发现使用如下命令：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git comment -m <span class="string">'write your comment here'</span></span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
 <p>依然无法成功将自己修改过的主题提交到github上。</p>
 <h5 id="解决方案如下："><a href="#解决方案如下：" class="headerlink" title="解决方案如下："></a>解决方案如下：</h5><p>在确保删除了各个主题的.git文件后，执行如下命令：</p>
@@ -309,7 +309,7 @@
         <p><span>本文标题:</span><a href="/2020/02/15/关于hexo遇到的问题汇总/">关于hexo遇到的问题汇总</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Louis</a></p>
         <p><span>发布时间:</span>2020-02-15, 19:02:17</p>
-        <p><span>最后更新:</span>2020-02-21, 23:45:02</p>
+        <p><span>最后更新:</span>2020-02-21, 23:52:33</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2020/02/15/关于hexo遇到的问题汇总/" title="关于hexo遇到的问题汇总">https://www.jiangluyu.com/2020/02/15/关于hexo遇到的问题汇总/</a>
             <span class="copy-path" data-clipboard-text="原文: https://www.jiangluyu.com/2020/02/15/关于hexo遇到的问题汇总/　　作者: Louis" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -345,7 +345,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#Q1-gyp-No-Xcode-or-CLT-version-detected"><span class="toc-number">1.</span> <span class="toc-text">Q1: gyp: No Xcode or CLT version detected!</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Q2-hexo迁移"><span class="toc-number">2.</span> <span class="toc-text">Q2: hexo迁移</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Q3-无法备份-themes"><span class="toc-number">3.</span> <span class="toc-text">Q3: 无法备份/themes</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#解决方案如下："><span class="toc-number">3.1.</span> <span class="toc-text">解决方案如下：</span></a></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Q1-gyp-No-Xcode-or-CLT-version-detected"><span class="toc-number">1.</span> <span class="toc-text">Q1: gyp: No Xcode or CLT version detected!</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Q2-hexo迁移"><span class="toc-number">2.</span> <span class="toc-text">Q2: hexo迁移</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Q3-无法备份-themes"><span class="toc-number">3.</span> <span class="toc-text">Q3: 无法备份/themes</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#解决方案如下："><span class="toc-number">3.0.1.</span> <span class="toc-text">解决方案如下：</span></a></li></ol></li></ol></li></ol>
         
     </div>
     <style>
