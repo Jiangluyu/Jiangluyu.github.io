@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[E021-合并两个有序链表]]></title>
+    <url>%2F2020%2F02%2F21%2FE021-%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E9%93%BE%E8%A1%A8%2F</url>
+    <content type="text"><![CDATA[将两个有序链表合并为一个新的有序链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。 示例： 输入：1-&gt;2-&gt;4, 1-&gt;3-&gt;4输出：1-&gt;1-&gt;2-&gt;3-&gt;4-&gt;4 方法一：递归思路即每次挑选一个“头”节点，在剩下的节点中再递归挑选“头”节点，直至有一个链表被挑光，即为空。 1234567891011121314151617181920212223242526272829303132/** * Definition for singly-linked list. * struct ListNode &#123; * int val; * ListNode *next; * ListNode(int x) : val(x), next(NULL) &#123;&#125; * &#125;; */class Solution &#123;public: ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) &#123; if (l1 == NULL) &#123; return l2; &#125; else if (l2 == NULL) &#123; return l1; &#125; if (l1-&gt;val &lt; l2-&gt;val) &#123; l1-&gt;next = mergeTwoLists(l1-&gt;next, l2); return l1; &#125; else &#123; l2-&gt;next = mergeTwoLists(l1, l2-&gt;next); return l2; &#125; &#125;&#125;; 复杂度分析 时间复杂度：O(m + n)，m，n分别为l1,l2的元素个数。递归函数每次去掉一个元素，直到两个链表都为空，因此需要调用R=O(m + n)次。而在递归函数中我们只进行了next指针的赋值操作，复杂度为O(1)，故递归的总时间复杂度为O(m + n)。 空间复杂度：O(m + n)，递归调用了该函数m + n次，使用了m + n个栈帧，故空间复杂度为O(m + n)。 方法二：迭代用一个prev指针维护当前接在结果中的最后一个节点，每次迭代要做的就是决定l1与l2中哪一个的剩余头节点成为prev-&gt;next。 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960/** * Definition for singly-linked list. * struct ListNode &#123; * int val; * ListNode *next; * ListNode(int x) : val(x), next(NULL) &#123;&#125; * &#125;; */class Solution &#123;public: ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) &#123; if (l1 == NULL) &#123; return l2; &#125; else if (l2 == NULL) &#123; return l1; &#125; ListNode* resHead = NULL; if (l1-&gt;val &lt; l2-&gt;val) &#123; resHead = l1; l1 = l1-&gt;next; &#125; else&#123; resHead = l2; l2 = l2-&gt;next; &#125; ListNode* prev = resHead; while (l1 != NULL &amp;&amp; l2 != NULL) &#123; if (l1-&gt;val &lt; l2-&gt;val) &#123; prev-&gt;next = l1; prev = prev-&gt;next; l1 = l1-&gt;next; &#125; else &#123; prev-&gt;next = l2; prev = prev-&gt;next; l2 = l2-&gt;next; &#125; &#125; if (l1 == NULL) &#123; prev-&gt;next = l2; &#125; else if (l2 == NULL) &#123; prev-&gt;next = l1; &#125; return resHead; &#125;&#125;; 复杂度分析 时间复杂度：O(m + n)，m，n分别为l1,l2的元素个数，相当于遍历了两次较短链表的长度。 空间复杂度：O(1)，每次迭代只使用了同一个prev指针，因此为常数级复杂度。]]></content>
+      <categories>
+        <category>LeetCode</category>
+      </categories>
+      <tags>
+        <tag>list</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[形近词辨析]]></title>
     <url>%2F2020%2F02%2F16%2F%E5%BD%A2%E8%BF%91%E8%AF%8D%E8%BE%A8%E6%9E%90%2F</url>
     <content type="text"><![CDATA[一些常用形近词整理。 precipitate v.使(坏事等)突然发生；使沉淀；使水蒸气凝结； a.仓促的，鲁莽的，突如其来的； n.沉淀物 percipient adj.敏锐的，有洞察力的，理解透彻的 perceive v.觉察，发觉，发现，感知，理解 mobilization n.动员；调动 mobility n.可动性；能动性；灵活性 defer v.推迟；服从 deter v.阻止]]></content>
