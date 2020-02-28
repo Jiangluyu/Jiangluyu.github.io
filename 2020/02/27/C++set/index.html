@@ -15,18 +15,18 @@
 
 
 
-<meta name="description" content="Q1: Smart phone &amp;amp; navigational devices or ask the locals for direction?Main idea: the former Reason 1: professional –&amp;gt; accurate, efficient Example 1: locals maybe do not know or give obsolete i">
-<meta name="keywords" content="口语">
+<meta name="description" content="关于C++ STL set的用法以及知识延伸。">
+<meta name="keywords" content="算法,STL">
 <meta property="og:type" content="article">
-<meta property="og:title" content="独立口语思路练习">
-<meta property="og:url" content="https://www.jiangluyu.com/2020/02/15/独立口语思路练习/index.html">
+<meta property="og:title" content="C++set详解">
+<meta property="og:url" content="https://www.jiangluyu.com/2020/02/27/C++set/index.html">
 <meta property="og:site_name" content="Louis睡醒了">
-<meta property="og:description" content="Q1: Smart phone &amp;amp; navigational devices or ask the locals for direction?Main idea: the former Reason 1: professional –&amp;gt; accurate, efficient Example 1: locals maybe do not know or give obsolete i">
+<meta property="og:description" content="关于C++ STL set的用法以及知识延伸。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-02-15T16:26:06.759Z">
+<meta property="og:updated_time" content="2020-02-26T18:16:08.091Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="独立口语思路练习">
-<meta name="twitter:description" content="Q1: Smart phone &amp;amp; navigational devices or ask the locals for direction?Main idea: the former Reason 1: professional –&amp;gt; accurate, efficient Example 1: locals maybe do not know or give obsolete i">
+<meta name="twitter:title" content="C++set详解">
+<meta name="twitter:description" content="关于C++ STL set的用法以及知识延伸。">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -58,7 +58,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>独立口语思路练习 | Louis睡醒了</title>
+<title>C++set详解 | Louis睡醒了</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -207,11 +207,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-独立口语思路练习" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-C++set" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2020/02/15/独立口语思路练习/" class="article-date">
-      <time datetime="2020-02-15T14:52:49.000Z" itemprop="datePublished">2020-02-15</time>
+      <a href="/2020/02/27/C++set/" class="article-date">
+      <time datetime="2020-02-26T16:43:00.000Z" itemprop="datePublished">2020-02-27</time>
 </a>
 
 
@@ -226,7 +226,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      独立口语思路练习
+      C++set详解
     </h1>
   
 
@@ -236,7 +236,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">70字</span>
+        <span class="post-count">686字</span>
       </span>
     </span>
 
@@ -245,7 +245,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">1分</span>
+        <span class="post-count">2分</span>
       </span>
     </span>
 </div>
@@ -256,13 +256,13 @@
       <div class="article-info article-info-post" style="margin-top:10px">
         
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/TOEFL/">TOEFL</a>
+    <a class="article-category-link" href="/categories/C/">C++</a>
     </div>
 
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/口语/">口语</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/STL/">STL</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法/">算法</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -272,11 +272,21 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h3 id="Q1-Smart-phone-amp-navigational-devices-or-ask-the-locals-for-direction"><a href="#Q1-Smart-phone-amp-navigational-devices-or-ask-the-locals-for-direction" class="headerlink" title="Q1: Smart phone &amp; navigational devices or ask the locals for direction?"></a>Q1: Smart phone &amp; navigational devices or ask the locals for direction?</h3><p><strong>Main idea:</strong> the former</p>
-<p><strong>Reason 1:</strong> professional –&gt; accurate, efficient</p>
-<p><strong>Example 1:</strong> locals maybe do not know or give obsolete information –&gt; slower, while navigational devices are always up-to-date</p>
-<p><strong>Reason 2: </strong>no need to care about language problem</p>
-<p><strong>Example 2:</strong> cannot speak Japanese, Last year travel to Japan, Google Map –&gt; not miss any event planned</p>
+        <p>关于C++ STL set的用法以及知识延伸。</p>
+<a id="more"></a>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;set&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">set</span>&lt;<span class="keyword">int</span>&gt; nums;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">        nums.insert(i);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 等效 set&lt;int&gt;::iterator it = nums.begin();</span></span><br><span class="line">    <span class="keyword">auto</span> it = nums.begin();</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> (it; it != nums.end(); it++) &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; *it &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="常见用法"><a href="#常见用法" class="headerlink" title="常见用法"></a>常见用法</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">begin() <span class="comment">// 返回指向set容器第一个元素的迭代器</span></span><br><span class="line"></span><br><span class="line">end() <span class="comment">// 返回指向set容器最后一个元素的迭代器，不存值</span></span><br><span class="line">    </span><br><span class="line">rbegin() <span class="comment">// 等效end()</span></span><br><span class="line">    </span><br><span class="line">rend() <span class="comment">// 等效begin()</span></span><br><span class="line">    </span><br><span class="line">clear() <span class="comment">// 清空set容器</span></span><br><span class="line">    </span><br><span class="line">empty() <span class="comment">// 判断set容器是否为空</span></span><br><span class="line">    </span><br><span class="line">max_size() <span class="comment">// 返回set容器可能包含元素的最大个数</span></span><br><span class="line">    </span><br><span class="line">size() <span class="comment">// 返回当前set容器中的元素个数</span></span><br><span class="line">    </span><br><span class="line">insert(x) <span class="comment">// 向set容器中插入值x，返回值为pair&lt;it, bool&gt;，bool表示是否成功，it指向x在set中的位置</span></span><br><span class="line">    </span><br><span class="line">insert(it_start, it_end) <span class="comment">// 向set中插入两迭代器中间的值</span></span><br><span class="line">    </span><br><span class="line">erase(x) <span class="comment">// 从set容器中删除值x，若x为迭代器，则删除迭代器指向的值</span></span><br><span class="line">    </span><br><span class="line">erase(it_start, it_end) <span class="comment">// 删除set中两迭代器中间的值，包括*it_start，不包括*it_end</span></span><br><span class="line">    </span><br><span class="line">count(x) <span class="comment">// 计算set中x出现的次数，在set中只可能为1或0</span></span><br><span class="line">    </span><br><span class="line">find(x) <span class="comment">// 若找到x，则返回指向x的迭代器，否则返回end()</span></span><br><span class="line">    </span><br><span class="line">lower_bound(x) <span class="comment">// 返回指向第一个大于等于x的值的迭代器</span></span><br><span class="line">    </span><br><span class="line">upper_bound(x) <span class="comment">// 返回指向第一个大于x的值的迭代器</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 返回pair&lt;it, it&gt;，即在两迭代器内，所有等于x的值的范围，即第一个x的位置与最后一个x的位置，set中若不存在x则两值相等</span></span><br><span class="line">equal_range(it_begin, it_end, x) </span><br><span class="line"></span><br><span class="line">set1.insert(set2.begin(), set3.end()) <span class="comment">// set1 = set2 ∪ set3 并去重</span></span><br><span class="line"></span><br><span class="line">set1.swap(set2) <span class="comment">// 两个set内容交换</span></span><br></pre></td></tr></table></figure>
+<h3 id="知识延伸"><a href="#知识延伸" class="headerlink" title="知识延伸"></a>知识延伸</h3><h5 id="map和set插入删除效率比其他序列容器高的原因："><a href="#map和set插入删除效率比其他序列容器高的原因：" class="headerlink" title="map和set插入删除效率比其他序列容器高的原因："></a>map和set插入删除效率比其他序列容器高的原因：</h5><blockquote>
+<p>底层实现为红黑树，对于关联容器来说，不需要做内存拷贝和内存移动。set容器内所有元素都是以节点的方式来存储，其节点结构和链表差不多，指向父节点和子节点。</p>
+</blockquote>
+<h5 id="map在每次insert、erase操作之后，以前的迭代器是否会过期？"><a href="#map在每次insert、erase操作之后，以前的迭代器是否会过期？" class="headerlink" title="map在每次insert、erase操作之后，以前的迭代器是否会过期？"></a>map在每次insert、erase操作之后，以前的迭代器是否会过期？</h5><blockquote>
+<p>不会，注意vector在进行相应操作后迭代器可能会过期。</p>
+</blockquote>
+<h5 id="插入、搜索元素时，效率如何？"><a href="#插入、搜索元素时，效率如何？" class="headerlink" title="插入、搜索元素时，效率如何？"></a>插入、搜索元素时，效率如何？</h5><blockquote>
+<p>set中使用的是二分查找，时间复杂度为<em>logn</em>，换言之，数据增大一倍时，搜索次数会多1次。</p>
+</blockquote>
+<h5 id="如何求并集、交集、差集、对称差集（A∪B-A∩B）？"><a href="#如何求并集、交集、差集、对称差集（A∪B-A∩B）？" class="headerlink" title="如何求并集、交集、差集、对称差集（A∪B-A∩B）？"></a>如何求并集、交集、差集、对称差集（A∪B-A∩B）？</h5><blockquote>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line">&gt; </span><br><span class="line">&gt; <span class="comment">// 交集</span></span><br><span class="line">&gt; set_intersection(it1_start, it1_end, it2_start, it2_end, inserter(res, res.begin()))</span><br><span class="line">&gt; </span><br><span class="line">&gt; <span class="comment">// 差集</span></span><br><span class="line">&gt; set_difference(it1_start, it1_end, it2_start, it2_end, inserter(res, res.begin()))</span><br><span class="line">&gt; </span><br><span class="line">&gt; <span class="comment">// 并集</span></span><br><span class="line">&gt; set_union(it1_start, it1_end, it2_start, it2_end, inserter(res, res.begin()))</span><br><span class="line">&gt;     </span><br><span class="line">&gt; <span class="comment">// 对称差集</span></span><br><span class="line">&gt; set_symmetry_difference(it1_start, it1_end, it2_start, it2_end, inserter(res, res.begin()))</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure></blockquote>
 
       
     </div>
@@ -285,13 +295,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2020/02/15/独立口语思路练习/">独立口语思路练习</a></p>
+        <p><span>本文标题:</span><a href="/2020/02/27/C++set/">C++set详解</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Louis</a></p>
-        <p><span>发布时间:</span>2020-02-15, 22:52:49</p>
-        <p><span>最后更新:</span>2020-02-16, 00:26:06</p>
+        <p><span>发布时间:</span>2020-02-27, 00:43:00</p>
+        <p><span>最后更新:</span>2020-02-27, 02:16:08</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2020/02/15/独立口语思路练习/" title="独立口语思路练习">https://www.jiangluyu.com/2020/02/15/独立口语思路练习/</a>
-            <span class="copy-path" data-clipboard-text="原文: https://www.jiangluyu.com/2020/02/15/独立口语思路练习/　　作者: Louis" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2020/02/27/C++set/" title="C++set详解">https://www.jiangluyu.com/2020/02/27/C++set/</a>
+            <span class="copy-path" data-clipboard-text="原文: https://www.jiangluyu.com/2020/02/27/C++set/　　作者: Louis" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -304,15 +314,15 @@
     <nav id="article-nav">
         
             <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2020/02/16/形近词辨析/">
-                    形近词辨析
+                <a href="/2020/02/29/今日母亲为我理发/">
+                    今日母亲为我理发
                 </a>
             </div>
         
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2020/02/15/托福答题模板（自用）/">
-                    托福答题模板（自用）
+                <a href="/2020/02/21/E021-合并两个有序链表/">
+                    E021-合并两个有序链表
                 </a>
             </div>
         
@@ -324,7 +334,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Q1-Smart-phone-amp-navigational-devices-or-ask-the-locals-for-direction"><span class="toc-number">1.</span> <span class="toc-text">Q1: Smart phone &amp; navigational devices or ask the locals for direction?</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#常见用法"><span class="toc-number">1.</span> <span class="toc-text">常见用法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#知识延伸"><span class="toc-number">2.</span> <span class="toc-text">知识延伸</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#map和set插入删除效率比其他序列容器高的原因："><span class="toc-number">2.0.1.</span> <span class="toc-text">map和set插入删除效率比其他序列容器高的原因：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#map在每次insert、erase操作之后，以前的迭代器是否会过期？"><span class="toc-number">2.0.2.</span> <span class="toc-text">map在每次insert、erase操作之后，以前的迭代器是否会过期？</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#插入、搜索元素时，效率如何？"><span class="toc-number">2.0.3.</span> <span class="toc-text">插入、搜索元素时，效率如何？</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#如何求并集、交集、差集、对称差集（A∪B-A∩B）？"><span class="toc-number">2.0.4.</span> <span class="toc-text">如何求并集、交集、差集、对称差集（A∪B-A∩B）？</span></a></li></ol></li></ol></li></ol>
         
     </div>
     <style>
@@ -360,7 +370,7 @@ var gitalk = new Gitalk({
   repo: 'Comment-Repo',
   owner: 'Jiangluyu',
   admin: ['Jiangluyu'],
-  id: 'Sat Feb 15 2020 22:52:49 GMT+0800',      // Ensure uniqueness and length less than 50
+  id: 'Thu Feb 27 2020 00:43:00 GMT+0800',      // Ensure uniqueness and length less than 50
   distractionFreeMode: false  // Facebook-like distraction free mode
 })
 
@@ -373,7 +383,7 @@ gitalk.render('gitalk-container')
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2020/02/16/形近词辨析/" title="上一篇: 形近词辨析">
+            <a href="/2020/02/29/今日母亲为我理发/" title="上一篇: 今日母亲为我理发">
                 <i class="fa fa-angle-left"></i>
             </a>
         
@@ -381,7 +391,7 @@ gitalk.render('gitalk-container')
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2020/02/15/托福答题模板（自用）/" title="下一篇: 托福答题模板（自用）">
+            <a href="/2020/02/21/E021-合并两个有序链表/" title="下一篇: E021-合并两个有序链表">
                 <i class="fa fa-angle-right"></i>
             </a>
         

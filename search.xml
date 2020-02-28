@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[今日母亲为我理发]]></title>
+    <url>%2F2020%2F02%2F29%2F%E4%BB%8A%E6%97%A5%E6%AF%8D%E4%BA%B2%E4%B8%BA%E6%88%91%E7%90%86%E5%8F%91%2F</url>
+    <content type="text"><![CDATA[因疫情缘故， 头发极长， 于是今日母亲用网购来的推子与剪子， 为我们爷俩剪了头， 十分满意。 父亲发型阴差阳错， 甚是新潮。]]></content>
+      <categories>
+        <category>日常</category>
+      </categories>
+      <tags>
+        <tag>活在此时</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[C++set详解]]></title>
+    <url>%2F2020%2F02%2F27%2FC%2B%2Bset%2F</url>
+    <content type="text"><![CDATA[关于C++ STL set的用法以及知识延伸。 12345678910111213141516171819#include &lt;iostream&gt;#include &lt;set&gt;using namespace std;int main(void)&#123; set&lt;int&gt; nums; for (int i = 0; i &lt; 10; i++) &#123; nums.insert(i); &#125; // 等效 set&lt;int&gt;::iterator it = nums.begin(); auto it = nums.begin(); for (it; it != nums.end(); it++) &#123; cout &lt;&lt; *it &lt;&lt; endl; &#125;&#125; 常见用法1234567891011121314151617181920212223242526272829303132333435363738begin() // 返回指向set容器第一个元素的迭代器end() // 返回指向set容器最后一个元素的迭代器，不存值 rbegin() // 等效end() rend() // 等效begin() clear() // 清空set容器 empty() // 判断set容器是否为空 max_size() // 返回set容器可能包含元素的最大个数 size() // 返回当前set容器中的元素个数 insert(x) // 向set容器中插入值x，返回值为pair&lt;it, bool&gt;，bool表示是否成功，it指向x在set中的位置 insert(it_start, it_end) // 向set中插入两迭代器中间的值 erase(x) // 从set容器中删除值x，若x为迭代器，则删除迭代器指向的值 erase(it_start, it_end) // 删除set中两迭代器中间的值，包括*it_start，不包括*it_end count(x) // 计算set中x出现的次数，在set中只可能为1或0 find(x) // 若找到x，则返回指向x的迭代器，否则返回end() lower_bound(x) // 返回指向第一个大于等于x的值的迭代器 upper_bound(x) // 返回指向第一个大于x的值的迭代器// 返回pair&lt;it, it&gt;，即在两迭代器内，所有等于x的值的范围，即第一个x的位置与最后一个x的位置，set中若不存在x则两值相等equal_range(it_begin, it_end, x) set1.insert(set2.begin(), set3.end()) // set1 = set2 ∪ set3 并去重set1.swap(set2) // 两个set内容交换 知识延伸map和set插入删除效率比其他序列容器高的原因： 底层实现为红黑树，对于关联容器来说，不需要做内存拷贝和内存移动。set容器内所有元素都是以节点的方式来存储，其节点结构和链表差不多，指向父节点和子节点。 map在每次insert、erase操作之后，以前的迭代器是否会过期？ 不会，注意vector在进行相应操作后迭代器可能会过期。 插入、搜索元素时，效率如何？ set中使用的是二分查找，时间复杂度为logn，换言之，数据增大一倍时，搜索次数会多1次。 如何求并集、交集、差集、对称差集（A∪B-A∩B）？ 1234567891011121314&gt; #include &lt;algorithm&gt;&gt; &gt; // 交集&gt; set_intersection(it1_start, it1_end, it2_start, it2_end, inserter(res, res.begin()))&gt; &gt; // 差集&gt; set_difference(it1_start, it1_end, it2_start, it2_end, inserter(res, res.begin()))&gt; &gt; // 并集&gt; set_union(it1_start, it1_end, it2_start, it2_end, inserter(res, res.begin()))&gt; &gt; // 对称差集&gt; set_symmetry_difference(it1_start, it1_end, it2_start, it2_end, inserter(res, res.begin()))&gt;]]></content>
+      <categories>
+        <category>C++</category>
+      </categories>
+      <tags>
+        <tag>算法</tag>
+        <tag>STL</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[E021-合并两个有序链表]]></title>
     <url>%2F2020%2F02%2F21%2FE021-%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E9%93%BE%E8%A1%A8%2F</url>
     <content type="text"><![CDATA[将两个有序链表合并为一个新的有序链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。 示例： 输入：1-&gt;2-&gt;4, 1-&gt;3-&gt;4输出：1-&gt;1-&gt;2-&gt;3-&gt;4-&gt;4 方法一：递归思路即每次挑选一个“头”节点，在剩下的节点中再递归挑选“头”节点，直至有一个链表被挑光，即为空。 1234567891011121314151617181920212223242526272829303132/** * Definition for singly-linked list. * struct ListNode &#123; * int val; * ListNode *next; * ListNode(int x) : val(x), next(NULL) &#123;&#125; * &#125;; */class Solution &#123;public: ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) &#123; if (l1 == NULL) &#123; return l2; &#125; else if (l2 == NULL) &#123; return l1; &#125; if (l1-&gt;val &lt; l2-&gt;val) &#123; l1-&gt;next = mergeTwoLists(l1-&gt;next, l2); return l1; &#125; else &#123; l2-&gt;next = mergeTwoLists(l1, l2-&gt;next); return l2; &#125; &#125;&#125;; 复杂度分析 时间复杂度：O(m + n)，m，n分别为l1,l2的元素个数。递归函数每次去掉一个元素，直到两个链表都为空，因此需要调用R=O(m + n)次。而在递归函数中我们只进行了next指针的赋值操作，复杂度为O(1)，故递归的总时间复杂度为O(m + n)。 空间复杂度：O(m + n)，递归调用了该函数m + n次，使用了m + n个栈帧，故空间复杂度为O(m + n)。 方法二：迭代用一个prev指针维护当前接在结果中的最后一个节点，每次迭代要做的就是决定l1与l2中哪一个的剩余头节点成为prev-&gt;next。 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960/** * Definition for singly-linked list. * struct ListNode &#123; * int val; * ListNode *next; * ListNode(int x) : val(x), next(NULL) &#123;&#125; * &#125;; */class Solution &#123;public: ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) &#123; if (l1 == NULL) &#123; return l2; &#125; else if (l2 == NULL) &#123; return l1; &#125; ListNode* resHead = NULL; if (l1-&gt;val &lt; l2-&gt;val) &#123; resHead = l1; l1 = l1-&gt;next; &#125; else&#123; resHead = l2; l2 = l2-&gt;next; &#125; ListNode* prev = resHead; while (l1 != NULL &amp;&amp; l2 != NULL) &#123; if (l1-&gt;val &lt; l2-&gt;val) &#123; prev-&gt;next = l1; prev = prev-&gt;next; l1 = l1-&gt;next; &#125; else &#123; prev-&gt;next = l2; prev = prev-&gt;next; l2 = l2-&gt;next; &#125; &#125; if (l1 == NULL) &#123; prev-&gt;next = l2; &#125; else if (l2 == NULL) &#123; prev-&gt;next = l1; &#125; return resHead; &#125;&#125;; 复杂度分析 时间复杂度：O(m + n)，m，n分别为l1,l2的元素个数，相当于遍历了两次较短链表的长度。 空间复杂度：O(1)，每次迭代只使用了同一个prev指针，因此为常数级复杂度。]]></content>
