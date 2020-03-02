@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://hexo-jiangluyu.oss-cn-shanghai.aliyuncs.com/20200303015136.gif">
 <meta property="og:image" content="https://hexo-jiangluyu.oss-cn-shanghai.aliyuncs.com/20200303015137.jpg">
-<meta property="og:updated_time" content="2020-03-02T17:52:18.870Z">
+<meta property="og:updated_time" content="2020-03-02T18:13:05.556Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="常用排序算法详解">
 <meta name="twitter:description" content="排序算法Playground在线运行地址：https://leetcode-cn.com/playground/rKzLfEEY/    排序算法 平均时间复杂度 最好情况 最坏情况 空间复杂度 排序方式 稳定性     冒泡排序 O(n²) O(n) O(n²) O(1) In-place 稳定   选择排序 O(n²) O(n²) O(n²) O(1) In-place 不稳定   插入排序">
@@ -383,13 +383,11 @@
 </table>
 <a id="more"></a>
 <p>注：</p>
-<ul>
-<li><p>稳定性：相同数字是否保持原顺序</p>
-</li>
-<li><p>排序方式：是否需要占据额外空间，需要为<code>Out-place</code>，不需要为<code>In-place</code></p>
-</li>
-<li>以下代码实现均为升序（小→大）</li>
-</ul>
+<blockquote>
+<p>稳定性：相同数字是否保持原顺序</p>
+<p>排序方式：是否需要占据额外空间，需要为<code>Out-place</code>，不需要为<code>In-place</code></p>
+<p>以下代码实现均为升序（小→大）</p>
+</blockquote>
 <h3 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h3><p>思想：遍历数组n次（n为数的个数），比较两个数的大小，较大的数下沉，较小的数上浮。</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">bubble_sort</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; arr)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> size = arr.size();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; size - <span class="number">1</span>; i++) &#123; <span class="comment">// 表示第i轮</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = size - <span class="number">1</span>; j &gt; i; j--) &#123; <span class="comment">// 从最后一个数开始依次向前比较，由于每次将最小的数浮到水面（即i）以上，因此每过一轮，需要比较的次数就变少一次</span></span><br><span class="line">            <span class="keyword">if</span> (arr[j] &lt; arr[j<span class="number">-1</span>]) &#123;</span><br><span class="line">                swap(arr[j], arr[j<span class="number">-1</span>]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>优化：由于数据顺序排好以后，冒泡算法仍然会进行下一轮的比较，尽管后面的遍历都是多余的。因此，设置标志位，若某一轮没有发生交换，则结束排序。</p>
@@ -435,7 +433,7 @@
         <p><span>本文标题:</span><a href="/2020/03/02/常用排序算法详解/">常用排序算法详解</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Louis</a></p>
         <p><span>发布时间:</span>2020-03-02, 23:43:00</p>
-        <p><span>最后更新:</span>2020-03-03, 01:52:18</p>
+        <p><span>最后更新:</span>2020-03-03, 02:13:05</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2020/03/02/常用排序算法详解/" title="常用排序算法详解">https://www.jiangluyu.com/2020/03/02/常用排序算法详解/</a>
             <span class="copy-path" data-clipboard-text="原文: https://www.jiangluyu.com/2020/03/02/常用排序算法详解/　　作者: Louis" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
