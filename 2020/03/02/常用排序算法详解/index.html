@@ -16,7 +16,7 @@
 
 
 <meta name="description" content="排序算法Playground在线运行地址：https://leetcode-cn.com/playground/rKzLfEEY/    排序算法 平均时间复杂度 最好情况 最坏情况 空间复杂度 排序方式 稳定性     冒泡排序 O(n²) O(n) O(n²) O(1) In-place 稳定   选择排序 O(n²) O(n²) O(n²) O(1) In-place 不稳定   插入排序">
-<meta name="keywords" content="排序， 算法">
+<meta name="keywords" content="算法,排序">
 <meta property="og:type" content="article">
 <meta property="og:title" content="常用排序算法详解">
 <meta property="og:url" content="https://www.jiangluyu.com/2020/03/02/常用排序算法详解/index.html">
@@ -25,7 +25,12 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://hexo-jiangluyu.oss-cn-shanghai.aliyuncs.com/20200303015136.gif">
 <meta property="og:image" content="https://hexo-jiangluyu.oss-cn-shanghai.aliyuncs.com/20200303015137.jpg">
-<meta property="og:updated_time" content="2020-03-02T18:13:05.556Z">
+<meta property="og:image" content="https://hexo-jiangluyu.oss-cn-shanghai.aliyuncs.com/20200303190241.gif">
+<meta property="og:image" content="https://hexo-jiangluyu.oss-cn-shanghai.aliyuncs.com/20200303234808.png">
+<meta property="og:image" content="https://hexo-jiangluyu.oss-cn-shanghai.aliyuncs.com/20200304005951.jpg">
+<meta property="og:image" content="https://hexo-jiangluyu.oss-cn-shanghai.aliyuncs.com/20200304010131.jpg">
+<meta property="og:image" content="https://hexo-jiangluyu.oss-cn-shanghai.aliyuncs.com/20200304010147.jpg">
+<meta property="og:updated_time" content="2020-03-03T17:28:30.282Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="常用排序算法详解">
 <meta name="twitter:description" content="排序算法Playground在线运行地址：https://leetcode-cn.com/playground/rKzLfEEY/    排序算法 平均时间复杂度 最好情况 最坏情况 空间复杂度 排序方式 稳定性     冒泡排序 O(n²) O(n) O(n²) O(1) In-place 稳定   选择排序 O(n²) O(n²) O(n²) O(1) In-place 不稳定   插入排序">
@@ -239,7 +244,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">1.6k字</span>
+        <span class="post-count">3k字</span>
       </span>
     </span>
 
@@ -248,7 +253,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">7分</span>
+        <span class="post-count">14分</span>
       </span>
     </span>
 </div>
@@ -265,7 +270,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/排序，-算法/">排序， 算法</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/排序/">排序</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法/">算法</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -400,6 +405,7 @@
 <p>帮助理解：</p>
 <p>假设有一组数据：</p>
 <p>59 20 17 13 28 14 23 83</p>
+<hr>
 <p><strong>第一轮：</strong>增量为4（子序列为[0, 4], [1, 5], [2, 6], [3, 7])</p>
 <p>首先i=4，即选中arr[4]即28，将其与arr[4-4]即59作为一个子序列进行插入排序，结果为：</p>
 <p><strong>28</strong> 20 17 13 <strong>59</strong> 14 23 83</p>
@@ -409,9 +415,11 @@
 <p>接着i=7，即选中arr[7]即83，将其与arr[5-4]即13作为一个子序列进行插入排序，由于13&lt;83，序列不变；</p>
 <p>最终结果为：</p>
 <p><strong>28 14</strong> 17 13 <strong>59 20</strong> 23 83</p>
+<hr>
 <p><strong>第二轮：</strong>增量为2（子序列为[0, 2, 4, 6], [1, 3, 5, 7])</p>
 <p>结果为：</p>
 <p><strong>17 13 23 14 28 20 59</strong> 83</p>
+<hr>
 <p><strong>第三轮：</strong>增量为1</p>
 <p>即将整个数组作为序列进行插入排序，结果为：</p>
 <p><strong>13 14 17 20 23 28</strong> 59 83</p>
@@ -421,7 +429,355 @@
 <p><img src="https://hexo-jiangluyu.oss-cn-shanghai.aliyuncs.com/20200303015136.gif" alt=""></p>
 <p>静态版：</p>
 <p><img src="https://hexo-jiangluyu.oss-cn-shanghai.aliyuncs.com/20200303015137.jpg" alt=""></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">merge_sort</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; arr, <span class="keyword">int</span> begin, <span class="keyword">int</span> end)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (begin &lt; end) &#123;</span><br><span class="line">        <span class="keyword">int</span> mid = (begin + end) / <span class="number">2</span>;</span><br><span class="line">        merge_sort(arr, begin, mid); <span class="comment">// 将左半部分排好序</span></span><br><span class="line">        merge_sort(arr, mid + <span class="number">1</span>, end); <span class="comment">// 将右半部分排好序</span></span><br><span class="line">        merge(arr, begin, mid, end); <span class="comment">// 归并左右部分</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">merge</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; arr, <span class="keyword">int</span> begin, <span class="keyword">int</span> mid, <span class="keyword">int</span> end)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> j = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> k = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> size = end - begin + <span class="number">1</span>;</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; temp(size, <span class="number">0</span>);</span><br><span class="line">    <span class="keyword">int</span> pLeft = begin;</span><br><span class="line">    <span class="keyword">int</span> pRight = mid + <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">bool</span> endLeft = <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">bool</span> endRight = <span class="literal">false</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; size; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (!endLeft &amp;&amp; !endRight) &#123; <span class="comment">// 若左右序列均未到达终点</span></span><br><span class="line">            <span class="keyword">if</span> (arr[pLeft] &lt; arr[pRight]) &#123; <span class="comment">// 取左右指针所指向元素中较小的那一个</span></span><br><span class="line">                temp[i] = arr[pLeft];</span><br><span class="line">                pLeft++;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                temp[i] = arr[pRight];</span><br><span class="line">                pRight++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (pLeft &gt; mid) &#123; <span class="comment">// 判定左右序列是否已到达终点，若是则标记</span></span><br><span class="line">                endLeft = <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (pRight &gt; end) &#123;</span><br><span class="line">                endRight = <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123; <span class="comment">// 若左右至少有一个已经到达终点，则将未到达终点的序列剩余部分加在temp后面</span></span><br><span class="line">        	<span class="keyword">if</span> (!endLeft) &#123;</span><br><span class="line">                temp[i] = arr[pLeft];</span><br><span class="line">                pLeft++;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                temp[i] = arr[pRight];</span><br><span class="line">                pRight++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> (j = <span class="number">0</span>, k = begin; j &lt; size; j++, k++) &#123; <span class="comment">// 将temp中的数按序存回arr</span></span><br><span class="line">        arr[k] = temp[j];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">merge_sort</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; arr, <span class="keyword">int</span> begin, <span class="keyword">int</span> end)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (begin &lt; end) &#123;</span><br><span class="line">        <span class="keyword">int</span> mid = (begin + end) / <span class="number">2</span>;</span><br><span class="line">        merge_sort(arr, begin, mid); <span class="comment">// 将左半部分排好序</span></span><br><span class="line">        merge_sort(arr, mid + <span class="number">1</span>, end); <span class="comment">// 将右半部分排好序</span></span><br><span class="line">        merge(arr, begin, mid, end); <span class="comment">// 归并左右部分</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">merge</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; arr, <span class="keyword">int</span> begin, <span class="keyword">int</span> mid, <span class="keyword">int</span> end)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> j = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> k = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> size = end - begin + <span class="number">1</span>;</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; temp(size, <span class="number">0</span>);</span><br><span class="line">    <span class="keyword">int</span> pLeft = begin;</span><br><span class="line">    <span class="keyword">int</span> pRight = mid + <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">bool</span> endLeft = <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">bool</span> endRight = <span class="literal">false</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; size; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (!endLeft &amp;&amp; !endRight) &#123; <span class="comment">// 若左右序列均未到达终点</span></span><br><span class="line">            <span class="keyword">if</span> (arr[pLeft] &lt; arr[pRight]) &#123; <span class="comment">// 取左右指针所指向元素中较小的那一个</span></span><br><span class="line">                temp[i] = arr[pLeft++];</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                temp[i] = arr[pRight++];</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (pLeft &gt; mid) &#123; <span class="comment">// 判定左右序列是否已到达终点，若是则标记</span></span><br><span class="line">                endLeft = <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (pRight &gt; end) &#123;</span><br><span class="line">                endRight = <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123; <span class="comment">// 若左右至少有一个已经到达终点，则将未到达终点的序列剩余部分加在temp后面</span></span><br><span class="line">        	<span class="keyword">if</span> (!endLeft) &#123;</span><br><span class="line">                temp[i] = arr[pLeft++];</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                temp[i] = arr[pRight++];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> (j = <span class="number">0</span>, k = begin; j &lt; size; j++, k++) &#123; <span class="comment">// 将temp中的数按序存回arr</span></span><br><span class="line">        arr[k] = temp[j];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h3><p>思想：分治法，先从序列中选出一个数作为pivot，将比这个数小的数放在其左边，大的数放在其右边。然后，对左右两个子序列重复上一步，直至各子区间内只有一个数。</p>
+<p>动态版：</p>
+<p><img src="https://hexo-jiangluyu.oss-cn-shanghai.aliyuncs.com/20200303190241.gif" alt=""></p>
+<p>帮助理解：</p>
+<p>例如，我们有这样一组序列：<strong>72</strong> 6 57 88 <strong>60</strong> 85 42 83 73 <strong>48</strong>，初始化pivot=60（这里的pivot为arr[begin], arr[mid], arr[end]的中间值），将其交换至末尾。</p>
+<p>对该序列进行划分：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">72</th>
+<th style="text-align:center">6</th>
+<th style="text-align:center">57</th>
+<th style="text-align:center">88</th>
+<th style="text-align:center">85</th>
+<th style="text-align:center">42</th>
+<th style="text-align:center">83</th>
+<th style="text-align:center">73</th>
+<th style="text-align:center">48</th>
+<th style="text-align:center">60</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">l</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">r</td>
+<td style="text-align:center">pivot</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>48</strong></td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">57</td>
+<td style="text-align:center">88</td>
+<td style="text-align:center">85</td>
+<td style="text-align:center">42</td>
+<td style="text-align:center">83</td>
+<td style="text-align:center">73</td>
+<td style="text-align:center"><strong>72</strong></td>
+<td style="text-align:center">60</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">l</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">r</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">pivot</td>
+</tr>
+<tr>
+<td style="text-align:center">48</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">57</td>
+<td style="text-align:center"><strong>42</strong></td>
+<td style="text-align:center">85</td>
+<td style="text-align:center"><strong>88</strong></td>
+<td style="text-align:center">83</td>
+<td style="text-align:center">73</td>
+<td style="text-align:center">72</td>
+<td style="text-align:center">60</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">r</td>
+<td style="text-align:center">l</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">pivot</td>
+</tr>
+<tr>
+<td style="text-align:center">48</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">57</td>
+<td style="text-align:center">42</td>
+<td style="text-align:center"><strong>60</strong></td>
+<td style="text-align:center">88</td>
+<td style="text-align:center">83</td>
+<td style="text-align:center">73</td>
+<td style="text-align:center">72</td>
+<td style="text-align:center"><strong>85</strong></td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">r</td>
+<td style="text-align:center">l</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p>对[48, 6, 57 ,42]，[88, 83, 73, 72, 85]进行划分：正好各自的pivot都在末尾。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">48</th>
+<th style="text-align:center">6</th>
+<th style="text-align:center">57</th>
+<th style="text-align:center">42</th>
+<th style="text-align:center">\</th>
+<th style="text-align:center"></th>
+<th style="text-align:center">88</th>
+<th style="text-align:center">83</th>
+<th style="text-align:center">73</th>
+<th style="text-align:center">72</th>
+<th>85</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">l1</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">r1</td>
+<td style="text-align:center">pivot1</td>
+<td style="text-align:center">\</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">l2</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">r2</td>
+<td>pivot2</td>
+</tr>
+<tr>
+<td style="text-align:center">48</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">57</td>
+<td style="text-align:center">42</td>
+<td style="text-align:center">\</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"><strong>75</strong></td>
+<td style="text-align:center">83</td>
+<td style="text-align:center">73</td>
+<td style="text-align:center"><strong>88</strong></td>
+<td>85</td>
+</tr>
+<tr>
+<td style="text-align:center">l1</td>
+<td style="text-align:center">r1</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">pivot1</td>
+<td style="text-align:center">\</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">r2</td>
+<td style="text-align:center">l2</td>
+<td>pivot2</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>6</strong></td>
+<td style="text-align:center"><strong>48</strong></td>
+<td style="text-align:center">57</td>
+<td style="text-align:center">42</td>
+<td style="text-align:center">\</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">75</td>
+<td style="text-align:center">83</td>
+<td style="text-align:center">73</td>
+<td style="text-align:center"><strong>85</strong></td>
+<td><strong>88</strong></td>
+</tr>
+<tr>
+<td style="text-align:center">r1</td>
+<td style="text-align:center">l1</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">pivot1</td>
+<td style="text-align:center">\</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">r2</td>
+<td style="text-align:center">l2</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td style="text-align:center"><strong>42</strong></td>
+<td style="text-align:center">57</td>
+<td style="text-align:center"><strong>48</strong></td>
+<td style="text-align:center">\</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">r1</td>
+<td style="text-align:center">l1</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">\</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p>[6], [88]不用划分，对[57, 48]，[75, 83, 73]划分：前者pivot=48，后者pivot=75，交换至末尾</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">\</th>
+<th style="text-align:center"></th>
+<th style="text-align:center">\</th>
+<th style="text-align:center"></th>
+<th style="text-align:center">57</th>
+<th style="text-align:center">48</th>
+<th style="text-align:center">\</th>
+<th style="text-align:center"></th>
+<th style="text-align:center">73</th>
+<th style="text-align:center">83</th>
+<th>75</th>
+<th>\</th>
+<th></th>
+<th>\</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">\</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">\</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">l1, r1</td>
+<td style="text-align:center">pivot1</td>
+<td style="text-align:center">\</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">l1</td>
+<td style="text-align:center">r1</td>
+<td>pivot2</td>
+<td>\</td>
+<td></td>
+<td>\</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">\</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">\</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"><strong>48</strong></td>
+<td style="text-align:center"><strong>57</strong></td>
+<td style="text-align:center">\</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">73</td>
+<td style="text-align:center">83</td>
+<td>75</td>
+<td>\</td>
+<td></td>
+<td>\</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">\</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">\</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">l1, r1</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">\</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">r1</td>
+<td style="text-align:center">l1</td>
+<td>pivot2</td>
+<td>\</td>
+<td></td>
+<td>\</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">\</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">\</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">\</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">73</td>
+<td style="text-align:center"><strong>75</strong></td>
+<td><strong>83</strong></td>
+<td>\</td>
+<td></td>
+<td>\</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">\</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">\</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">\</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">r1</td>
+<td style="text-align:center">l1</td>
+<td></td>
+<td>\</td>
+<td></td>
+<td>\</td>
+</tr>
+</tbody>
+</table>
+<p>至此，排序完成。</p>
+<p>最终序列为：</p>
+<p>6 42 48 57 60 73 75 83 85 88</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">find_pivot</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; arr, <span class="keyword">int</span> begin, <span class="keyword">int</span> end)</span> </span>&#123; <span class="comment">// 返回arr[begin], arr[mid], arr[end]的中间值</span></span><br><span class="line">    <span class="keyword">int</span> mid = (begin + end) &gt;&gt; <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span> (arr[begin] &lt; arr[end]) &#123;</span><br><span class="line">        <span class="keyword">if</span> (arr[end] &lt; arr[mid]) &#123;</span><br><span class="line">            <span class="keyword">return</span> end;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (arr[begin] &gt; arr[mid]) &#123;</span><br><span class="line">            <span class="keyword">return</span> begin;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> mid;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (arr[end] &gt; arr[mid]) &#123;</span><br><span class="line">            <span class="keyword">return</span> end;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (arr[begin] &lt; arr[mid]) &#123;</span><br><span class="line">            <span class="keyword">return</span> begin;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> mid;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">partition</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; arr, <span class="keyword">int</span> begin, <span class="keyword">int</span> end, <span class="keyword">int</span> pivot)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">while</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">        <span class="keyword">while</span> (arr[begin] &lt; pivot) &#123; <span class="comment">// 从左开始找到第一个比pivot大的值</span></span><br><span class="line">            begin++;</span><br><span class="line">        &#125;</span><br><span class="line">        end--; <span class="comment">// 调整（若不调整，会将放在end处的pivot交换到别的位置）</span></span><br><span class="line">        <span class="keyword">while</span> (arr[end] &gt; pivot) &#123; <span class="comment">// 从右开始找到第一个比pivot小的值</span></span><br><span class="line">            end--;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (begin &gt;= end) &#123;</span><br><span class="line">            <span class="keyword">return</span> begin; <span class="comment">// 返回比pivot大的第一个值，即右序列的第一个位置</span></span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            swap(arr[begin], arr[end]);</span><br><span class="line">            begin++; <span class="comment">// 调整</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">quick_sort</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; arr, <span class="keyword">int</span> begin, <span class="keyword">int</span> end)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (begin &gt;= end) &#123;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">int</span> pivotIdx = find_pivot(arr, begin, end);</span><br><span class="line">        swap(arr[pivotIdx], arr[end]); <span class="comment">// 将pivot放在序列末尾</span></span><br><span class="line">        <span class="keyword">int</span> bgRight = partition(arr, begin, end, arr[end]); <span class="comment">// partition的返回值为右序列（比pivot大）的第一个位置，注意pivot已经被交换到末尾，故传入的pivot为arr[end]</span></span><br><span class="line">        swap(arr[bgRight], arr[end]); <span class="comment">// 将pivot值放回中间，使左序列比pivot大，右序列比pivot小</span></span><br><span class="line">        quick_sort(arr, begin, bgRight<span class="number">-1</span>); <span class="comment">// 对左序列重新排序</span></span><br><span class="line">        quick_sort(arr, bgRight+<span class="number">1</span>, end); <span class="comment">// 对右序列重新排序</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h3><h3 id="计数排序"><a href="#计数排序" class="headerlink" title="计数排序"></a>计数排序</h3><p>思想：空间换取时间，计算每个数的次数，最后遍历并存入原数组.</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">counting_sort</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; arr)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> maxNum = INT_MIN;</span><br><span class="line">    <span class="keyword">int</span> size = arr.size();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; size; i++) &#123;</span><br><span class="line">        maxNum = max(maxNum, arr[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">int</span> range = maxNum + <span class="number">1</span>;</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; temp(range, <span class="number">0</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; size; i++) &#123; <span class="comment">// 计数</span></span><br><span class="line">        ++temp[arr[i]];</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>, j = <span class="number">-1</span>; i &lt; range; i++) &#123; <span class="comment">// 遍历每个数槽</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">0</span>; k &lt; temp[i]; k++) &#123; <span class="comment">// 取出该数，直到达到之前的计数</span></span><br><span class="line">            arr[++j] = i;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>优化：创建<code>max-min+1</code>个空间，减少空间浪费</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">counting_sort_op</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; arr)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> maxNum = INT_MIN;</span><br><span class="line">    <span class="keyword">int</span> minNum = INT_MAX;</span><br><span class="line">    <span class="keyword">int</span> size = arr.size();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; size; i++) &#123;</span><br><span class="line">        maxNum = max(maxNum, arr[i]);</span><br><span class="line">        minNum = min(minNum, arr[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">int</span> range = maxNum - minNum + <span class="number">1</span>;</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; temp(range, <span class="number">0</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; size; i++) &#123;</span><br><span class="line">        temp[arr[i]-minNum]++;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>, j = <span class="number">-1</span>; i &lt; range; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">0</span>; k &lt; temp[i]; k++) &#123;</span><br><span class="line">            arr[++j] = i + minNum;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="桶排序"><a href="#桶排序" class="headerlink" title="桶排序"></a>桶排序</h3><p>思想：分治法，桶排序是计数排序的扩展版本，计数排序可以看成每个桶只存储相同元素，桶排序每个桶存储一定范围的元素，通过映射函数，将待排序数组中的元素映射到各个对应的桶中，对每个桶中的元素进行排序，最后将非空桶中的元素逐个放入原序列中。</p>
+<p>静态版：</p>
+<p><img src="https://hexo-jiangluyu.oss-cn-shanghai.aliyuncs.com/20200303234808.png" alt=""></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">bucket_sort</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; arr)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> size = arr.size();</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; temp[size];</span><br><span class="line">    <span class="keyword">int</span> maxNum = INT_MIN;</span><br><span class="line">    <span class="keyword">int</span> minNum = INT_MAX;</span><br><span class="line">    </span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; size; i++) &#123; <span class="comment">// 确定最大最小值</span></span><br><span class="line">        maxNum = max(maxNum, arr[i]);</span><br><span class="line">        minNum = min(minNum, arr[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; size; i++) &#123;</span><br><span class="line">        <span class="keyword">int</span> bucketNum = (<span class="keyword">int</span>)(arr[i] - minNum) / (maxNum - minNum + <span class="number">1</span>) * size; <span class="comment">// 加1是为了确保bucketNum &lt; size</span></span><br><span class="line">        temp[bucketNum].push_back(arr[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; size; i++) &#123; <span class="comment">// 将每个桶内排序</span></span><br><span class="line">        sort(temp[i].begin(), temp[i].end());</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">int</span> idx = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; size; i++) &#123; <span class="comment">// 按序将桶内排好序的数字拷回arr</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; temp[i].size(); j++) &#123;</span><br><span class="line">            arr[idx++] = temp[i][j];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="基数排序"><a href="#基数排序" class="headerlink" title="基数排序"></a>基数排序</h3><p>思想：首先了解分配排序(binsort)，即创建数组A[MaxValue]；然后将每个数放到相应的位置上（例如17放在下标17的数组位置）；最后遍历数组，即为排序后的结果。</p>
+<p>静态版：</p>
+<p><img src="https://hexo-jiangluyu.oss-cn-shanghai.aliyuncs.com/20200304005951.jpg" alt=""></p>
+<p>问题在于，当序列中的元素分布不集中时，会造成大量的空间开销。</p>
+<p>基数排序即在此基础上，通过基数的限制减少空间开销。</p>
+<p>静态版：</p>
+<p><img src="https://hexo-jiangluyu.oss-cn-shanghai.aliyuncs.com/20200304010131.jpg" alt=""></p>
+<p><img src="https://hexo-jiangluyu.oss-cn-shanghai.aliyuncs.com/20200304010147.jpg" alt=""></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">count_sort</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; arr)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> size = arr.size();</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; temp(size, <span class="number">0</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">radix_sort</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; arr)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> maxNum = INT_MIN;</span><br><span class="line">    <span class="keyword">int</span> size = arr.size();</span><br><span class="line">    <span class="keyword">int</span> <span class="built_in">exp</span> = <span class="number">0</span>; <span class="comment">//记录最大数的位数</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; size; i++) &#123;</span><br><span class="line">        maxNum = max(maxNum, arr[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> (<span class="built_in">exp</span> = <span class="number">1</span>; maxNum / <span class="built_in">exp</span> &gt; <span class="number">0</span>; <span class="built_in">exp</span> *= <span class="number">10</span>) &#123;</span><br><span class="line">        count_sort(arr, <span class="built_in">exp</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -433,7 +789,7 @@
         <p><span>本文标题:</span><a href="/2020/03/02/常用排序算法详解/">常用排序算法详解</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Louis</a></p>
         <p><span>发布时间:</span>2020-03-02, 23:43:00</p>
-        <p><span>最后更新:</span>2020-03-03, 02:13:05</p>
+        <p><span>最后更新:</span>2020-03-04, 01:28:30</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2020/03/02/常用排序算法详解/" title="常用排序算法详解">https://www.jiangluyu.com/2020/03/02/常用排序算法详解/</a>
             <span class="copy-path" data-clipboard-text="原文: https://www.jiangluyu.com/2020/03/02/常用排序算法详解/　　作者: Louis" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -463,7 +819,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#排序算法"><span class="toc-number">1.</span> <span class="toc-text">排序算法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#冒泡排序"><span class="toc-number">1.1.</span> <span class="toc-text">冒泡排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#选择排序"><span class="toc-number">1.2.</span> <span class="toc-text">选择排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#插入排序"><span class="toc-number">1.3.</span> <span class="toc-text">插入排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#希尔排序"><span class="toc-number">1.4.</span> <span class="toc-text">希尔排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#归并排序"><span class="toc-number">1.5.</span> <span class="toc-text">归并排序</span></a></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#排序算法"><span class="toc-number">1.</span> <span class="toc-text">排序算法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#冒泡排序"><span class="toc-number">1.1.</span> <span class="toc-text">冒泡排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#选择排序"><span class="toc-number">1.2.</span> <span class="toc-text">选择排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#插入排序"><span class="toc-number">1.3.</span> <span class="toc-text">插入排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#希尔排序"><span class="toc-number">1.4.</span> <span class="toc-text">希尔排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#归并排序"><span class="toc-number">1.5.</span> <span class="toc-text">归并排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#快速排序"><span class="toc-number">1.6.</span> <span class="toc-text">快速排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#堆排序"><span class="toc-number">1.7.</span> <span class="toc-text">堆排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#计数排序"><span class="toc-number">1.8.</span> <span class="toc-text">计数排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#桶排序"><span class="toc-number">1.9.</span> <span class="toc-text">桶排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#基数排序"><span class="toc-number">1.10.</span> <span class="toc-text">基数排序</span></a></li></ol></li></ol>
         
     </div>
     <style>
